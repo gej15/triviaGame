@@ -1,0 +1,84 @@
+html { 
+    background: url(../images/coffee.jpg) 
+  }
+
+
+#visable {
+    visibility: visible;
+}
+.visable { 
+    visibility: visible;
+}
+
+#restart{
+    display: none;
+}
+
+.invisable {
+    display: none
+}
+
+.invisable2 {
+    display: none;
+}
+
+.title {
+    
+    font-family: 'Lato', sans-serif;
+    font-size: 80px;
+    
+}
+.box {
+    border: black solid 2px;
+    border-bottom: none;
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 70px;
+    height: 100px;
+    padding: 40px;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#question {
+    font-weight: bold
+
+}
+
+.ans1 {
+    margin-top: 25px;
+}
+
+.the1 {
+    margin-top: 25px;
+}
+
+.selector {
+    font-size: 40px
+}
+
+.selector:hover{
+    background: sienna;   
+}
+
+.container {
+    border: black solid 2px;
+    border-top: none;
+    margin-left: 15%;
+    margin-right: 15%;
+    height: 450px;
+    padding: 40px;
+    background-color: wheat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.center {
+    padding: 20px;
+    font-size: 25px;
+}
+
