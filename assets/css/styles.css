@@ -62,11 +62,11 @@ html {
     font-size: 40px
 }
 
-.selector:hover{
+.selector:hover {
     background: sienna;   
 }
 
-#test2:hover {
+#text2:hover {
     background: sienna;
 }
 
