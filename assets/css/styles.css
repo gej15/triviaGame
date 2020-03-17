@@ -66,6 +66,10 @@ html {
     background: sienna;   
 }
 
+#test2:hover {
+    background: sienna;
+}
+
 .container {
     border: black solid 2px;
     border-top: none;
