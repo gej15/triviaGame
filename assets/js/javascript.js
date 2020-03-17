@@ -40,7 +40,7 @@ const question5 = {
 }
 
 const question6 = {
-    question: "Which country dirnks the most coffee per capita?",
+    question: "Which country drinks the most coffee per capita?",
     rightAnswer: "Finland",
     wrongAnswer1: "U.S.A.",
     wrongAnswer2: "Spain",
@@ -208,72 +208,24 @@ function answerQuestion() {
     document.querySelector('.ans').classList.toggle('invisable')
 }
 
-document.querySelector('#answer1').onclick = function(){
-  
-   if ( buttonArray[0] == question[j].rightAnswer ){
-       text1.textContent = question[j].rightAnswer + " was the right answer"
-       text2.textContent = 'Next Question'
-       correct++
-       next()
+const answerBox = document.querySelector('.answerBox')
 
-   } else {
-       text1.textContent = "WRONG " + question[j].rightAnswer + " was the correct answer"
-       text2.textContent = 'Next Question'
-       wrong++
-       next()
-   }
-}
+answerBox.addEventListener('click', checkAnswer, false) 
+        
+function checkAnswer(e) {     
+        let answer = e.target.innerText   
+        console.log(answer)
+        console.log(question[j].rightAnswer)
+        if ( answer == question[j].rightAnswer ){
+            text1.textContent = question[j].rightAnswer + " was the right answer"
+            text2.textContent = 'Next Question'
+            correct++
+            next()
 
-document.querySelector('#answer2').onclick = function(){
-    console.log(question[j].rightAnswer)
-    console.log('')
-    console.log(buttonArray[1])
-   if ( buttonArray[1] == question[j].rightAnswer ){
-       text1.textContent = question[j].rightAnswer + " was the right answer"
-       text2.textContent = 'Next Question'
-       correct++
-       next()
-
-   } else {
-       text1.textContent = "WRONG " + question[j].rightAnswer + " was the correct answer"
-       text2.textContent = 'Next Question'
-       next()
-       wrong++
-   }
-}
-
-document.querySelector('#answer3').onclick = function(){
-    console.log(question[j].rightAnswer)
-    console.log('')
-    console.log(buttonArray[2])
-   if ( buttonArray[2] == question[j].rightAnswer ){
-       text1.textContent = question[j].rightAnswer + " was the right answer"
-       correct++
-       text2.textContent = 'Next Question'
-       next()
-
-   } else {
-       text1.textContent = "WRONG " + question[j].rightAnswer + " was the correct answer"
-       text2.textContent = 'Next Question'
-       next()
-       wrong++
-   }
-}
-
-document.querySelector('#answer4').onclick = function(){
-    console.log(question[j].rightAnswer)
-    console.log('')
-    console.log(buttonArray[3])
-   if ( buttonArray[3] == question[j].rightAnswer ){
-       text1.textContent = question[j].rightAnswer + " was the right answer"
-       correct++
-       text2.textContent = 'Next Question'
-       next()
-
-   } else {
-       text1.textContent = "WRONG " + question[j].rightAnswer + " was the correct answer"
-       text2.textContent = 'Next Question'
-       next()
-       wrong++
-   }
-}
+        } else {
+            text1.textContent = "WRONG " + question[j].rightAnswer + " was the correct answer"
+            text2.textContent = 'Next Question'
+            wrong++
+            next()
+        }
+    }
